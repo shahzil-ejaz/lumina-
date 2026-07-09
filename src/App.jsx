@@ -66,11 +66,11 @@ export default function App() {
       <main className="w-full px-margin-mobile md:px-margin-desktop pt-32 pb-16">
         {/* Hero Section */}
         {activeCategory === 'All' && (
-          <section className="text-center md:text-left mb-32">
-            <h1 className="font-display-lg text-display-lg text-on-surface mb-4" style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}>
+          <section className="text-center md:text-left mb-32 pt-12 md:pt-20">
+            <h1 className="font-display-lg text-display-lg text-on-surface mb-8 max-w-3xl" style={{ fontFamily: '"Playfair Display", "Times New Roman", serif' }}>
               Curated Living
             </h1>
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto md:mx-0">
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto md:mx-0 leading-relaxed">
               Discover thoughtfully selected pieces to elevate your everyday spaces. Minimalist design meets tactile comfort.
             </p>
           </section>
@@ -94,7 +94,7 @@ export default function App() {
                     <h2 className="font-headline-lg text-headline-lg text-on-surface mb-6 border-b border-outline-variant pb-2">
                       New Arrivals
                     </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 gap-y-10">
+                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 gap-y-8 md:gap-y-10">
                       {products.slice(0, 4).map((product, index) => (
                         <ProductCard key={index} product={product} index={index} />
                       ))}
@@ -110,7 +110,7 @@ export default function App() {
                         <h2 className="font-headline-lg text-headline-lg text-on-surface mb-6 border-b border-outline-variant pb-2">
                           {cat}
                         </h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 gap-y-10">
+                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 gap-y-8 md:gap-y-10">
                           {catProducts.map((product, index) => (
                             <ProductCard key={index} product={product} index={index} />
                           ))}
@@ -124,7 +124,7 @@ export default function App() {
                   <h2 className="font-display-lg text-display-lg text-on-surface mb-8 capitalize">
                     {activeCategory}
                   </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 gap-y-10">
+                  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 gap-y-8 md:gap-y-10">
                     {filteredProducts.map((product, index) => (
                       <ProductCard key={index} product={product} index={index} />
                     ))}
