@@ -66,11 +66,11 @@ export default function App() {
       <main className="w-full px-margin-mobile md:px-margin-desktop pt-32 pb-16">
         {/* Hero Section */}
         {activeCategory === 'All' && (
-          <section className="text-center md:text-left mb-32 pt-12 md:pt-20">
+          <section className="text-left mb-32 pt-12 md:pt-20">
             <h1 className="font-display-lg text-display-lg text-on-surface mb-8 max-w-3xl" style={{ fontFamily: '"Playfair Display", "Times New Roman", serif' }}>
               Curated Living
             </h1>
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto md:mx-0 leading-relaxed">
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
               Discover thoughtfully selected pieces to elevate your everyday spaces. Minimalist design meets tactile comfort.
             </p>
           </section>

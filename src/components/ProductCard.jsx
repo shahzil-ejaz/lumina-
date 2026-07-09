@@ -20,7 +20,7 @@ export const ProductCard = ({ product, index }) => {
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 pointer-events-none"></div>
       </div>
       <div className="flex flex-col gap-1 px-1">
-        <h3 className="font-title-md text-title-md text-on-surface truncate">
+        <h3 className="font-title-md text-label-md md:text-title-md text-on-surface truncate">
           {product.title}
         </h3>
         <p className="font-body-md text-body-md text-on-surface-variant">
