@@ -6,7 +6,7 @@ import { SkeletonLoader } from './components/SkeletonLoader';
 import { parseCSV } from './utils/csvParser';
 
 const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRCg49iW_BLFJ6gYXtJtIbZ0TL82-zh4BF9-pLFmwh9c81JiwUZKouLXXGXU2n4kbpaPSAozYP6x9K1/pub?output=csv";
-
+// helllllllll
 export default function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -44,8 +44,8 @@ export default function App() {
   }, []);
 
   const categories = Array.from(new Set(products.map(p => p.category).filter(Boolean)));
-  const filteredProducts = activeCategory === 'All' 
-    ? products 
+  const filteredProducts = activeCategory === 'All'
+    ? products
     : products.filter(p => p.category === activeCategory);
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
@@ -54,8 +54,8 @@ export default function App() {
   return (
     <div className="flex-grow flex flex-col w-full">
       <Navbar toggleSidebar={toggleSidebar} />
-      
-      <CategoryFilters 
+
+      <CategoryFilters
         categories={categories}
         activeCategory={activeCategory}
         setActiveCategory={setActiveCategory}
@@ -100,7 +100,7 @@ export default function App() {
                       ))}
                     </div>
                   </section>
-                  
+
                   {/* Dynamically display up to 2 distinct categories for the homepage view */}
                   {categories.slice(0, 2).map(cat => {
                     const catProducts = products.filter(p => p.category === cat);
